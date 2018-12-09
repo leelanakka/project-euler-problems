@@ -13,9 +13,8 @@ const isPythagoreanTriplet = function(a,b,c){
 
 const specialTripletProduct = function(limit){
     for (let a = 1; a < limit; a++) {
-        for(let b = 2; b < limit; b++){
-            let c = b+a;
-            c = 1000-c; 
+        for(let b = a+1; b < limit; b++){
+            let c = 1000-(b+a);
             if(isPythagoreanTriplet(a,b,c)){
                 return a*b*c;
             }
